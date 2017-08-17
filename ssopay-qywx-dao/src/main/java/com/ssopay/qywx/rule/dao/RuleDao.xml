@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssopay.qywx.rule.dao.RuleDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.ssopay.qywx.rule.bean.Rule">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="rule" property="rule" />
+		<result column="type" property="type" />
+		<result column="icon" property="icon" />
+		<result column="condition" property="condition" />
+		<result column="description" property="description" />
+		<result column="createDate" property="createDate" />
+		<result column="disable" property="disable" />
+		<result column="creator_id" property="creatorId" />
+		<result column="parent_id" property="parentId" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, rule, type, icon, condition, description, createDate AS createDate, disable, creator_id, parent_id
+    </sql>
+    
+    <!-- 查询用户所有的权限规则 -->
+    <select id="myRuleCodes" resultType="String" parameterType="Long">
+    	select t.rule from t_rule t
+    		inner join t_group_rule tt on t.id = tt.rule_id
+    		inner join t_user_group ttt on tt.group_id = ttt.group_id
+    		where t.type = 3 and ttt.user_id = #{uid}
+    		order by t.id
+    </select>
+    
+    <!-- 查询用户所有的主规则 -->
+    <select id="mainRules" resultType="Rule" parameterType="Long">
+    	select distinct t.* from t_rule t
+    		inner join t_group_rule tt on t.id = tt.rule_id
+    		inner join t_user_group ttt on tt.group_id = ttt.group_id
+    		where t.type = 1 and ttt.user_id = #{uid}
+    		order by t.id
+    </select>
+    <select id="subRules" resultType="Rule">
+    	select distinct t.* from t_rule t
+    		inner join t_group_rule tt on t.id = tt.rule_id
+    		inner join t_user_group ttt on tt.group_id = ttt.group_id
+    		where t.type = 2 and t.parent_id = #{pid} and ttt.user_id = #{uid}
+    		order by t.id
+    </select>
+
+</mapper>

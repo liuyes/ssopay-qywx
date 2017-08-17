@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssopay.qywx.user.dao.UserDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.ssopay.qywx.user.bean.User">
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<result column="salt" property="salt" />
+		<result column="name" property="name" />
+		<result column="email" property="email" />
+		<result column="mobile" property="mobile" />
+		<result column="description" property="description" />
+		<result column="createDate" property="createDate" />
+		<result column="updateDate" property="updateDate" />
+		<result column="disable" property="disable" />
+		<result column="creator_id" property="creatorId" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, username, password, salt, name, email, mobile, description, createDate AS createDate, updateDate AS updateDate, disable, creator_id
+    </sql>
+    
+</mapper>
