@@ -37,7 +37,7 @@ Font-awesome | 字体图标  | [http://fontawesome.io/](http://fontawesome.io/)
 
 ## 界面演示
 ### 登录页
-![登录页](http://7xsmaf.com1.z0.glb.clouddn.com/login.png "登录页")
+![登录页](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/login.png "登录页")
 ### 控制台
 ![控制台](http://7xsmaf.com1.z0.glb.clouddn.com/1.png "控制台")
 ### 用户管理
