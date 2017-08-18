@@ -18,7 +18,8 @@ public class CaptchaValidateFilter extends AccessControlFilter {
     public void setJcaptchaParam(String jcaptchaParam) {
         this.jcaptchaParam = jcaptchaParam;
     }
-    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
+    @Override
+    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
         // 设置验证码是否开启属性，页面可以根据该属性来决定是否显示验证码
         request.setAttribute("jcaptchaEbabled", jcaptchaEnabled);
         HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
@@ -26,13 +27,20 @@ public class CaptchaValidateFilter extends AccessControlFilter {
         if (jcaptchaEnabled == false || !"post".equalsIgnoreCase(httpServletRequest.getMethod())) {
             return true;
         }
-        // 此时是表单提交，验证验证码是否正确
-        return JCaptchaServiceSingleton.getInstance()
-        		.validateResponseForID(
-        				SecurityUtils.getSubject().getSession().getId().toString(), 
-        				httpServletRequest.getParameter(jcaptchaParam)
-        				);
+        try {
+        	// 此时是表单提交，验证验证码是否正确
+            return JCaptchaServiceSingleton.getInstance()
+            		.validateResponseForID(
+            				SecurityUtils.getSubject().getSession().getId().toString(), 
+            				httpServletRequest.getParameter(jcaptchaParam)
+            				);
+        } catch (Exception e) {
+        	e.printStackTrace();
+        	return false;
+        }
+        
     }
+    @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
         // 如果验证码失败了，存储失败key属性
         request.setAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME, "captcha.error");

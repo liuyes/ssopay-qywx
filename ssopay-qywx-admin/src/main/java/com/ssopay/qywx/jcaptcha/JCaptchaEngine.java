@@ -24,9 +24,6 @@ import com.octo.captcha.image.gimpy.GimpyFactory;
 
 public class JCaptchaEngine extends ListImageCaptchaEngine {
 
-	public static final String IMAGE_CAPTCHA_KEY = "imageCaptcha";// ImageCaptcha对象存放在Session中的key
-	public static final String CAPTCHA_INPUT_NAME = "captcha";// 验证码输入表单名称
-	public static final String CAPTCHA_IMAGE_URL = "/captcha.jpg";// 验证码图片URL
 	private static final Integer MIN_WORD_LENGTH = 4;// 验证码最小长度
 	private static final Integer MAX_WORD_LENGTH = 4;// 验证码最大长度
 	private static final Integer IMAGE_HEIGHT = 28;// 验证码图片高度
