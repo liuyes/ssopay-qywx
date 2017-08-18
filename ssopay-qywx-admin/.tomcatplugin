@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tomcatProjectProperties>
-    <rootDir>/src/main/webapp</rootDir>
+    <rootDir>/target/ssopay-qywx-admin</rootDir>
     <workDir>/work</workDir>
     <exportSource>false</exportSource>
     <reloadable>true</reloadable>

@@ -115,7 +115,7 @@
 									<div class="form-inline">
 										<div class="input-group">
 		                                    <div class="input-group-addon"><span class="fa fa-check" aria-hidden="true"></span></div>
-		                                    <input type="text" class="form-control" id="c-captcha" placeholder="验证码" name="captcha" autocomplete="off" size="35" data-rule="验证码:required" />
+		                                    <input type="text" class="form-control" id="c-captcha" placeholder="验证码" name="captcha" autocomplete="off" size="26" data-rule="验证码:required" />
 		                                </div>
 		                                <div class="input-group">
 		                                    <img src="${ctx}/code" id="captchaImg" title="点击刷新验证码" />
