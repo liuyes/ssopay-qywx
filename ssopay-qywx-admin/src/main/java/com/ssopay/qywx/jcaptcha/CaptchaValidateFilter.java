@@ -19,7 +19,7 @@ public class CaptchaValidateFilter extends AccessControlFilter {
         this.jcaptchaParam = jcaptchaParam;
     }
     @Override
-    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
+    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
         // 设置验证码是否开启属性，页面可以根据该属性来决定是否显示验证码
         request.setAttribute("jcaptchaEbabled", jcaptchaEnabled);
         HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
@@ -29,16 +29,15 @@ public class CaptchaValidateFilter extends AccessControlFilter {
         }
         try {
         	// 此时是表单提交，验证验证码是否正确
-            return JCaptchaServiceSingleton.getInstance()
-            		.validateResponseForID(
-            				SecurityUtils.getSubject().getSession().getId().toString(), 
-            				httpServletRequest.getParameter(jcaptchaParam)
-            				);
-        } catch (Exception e) {
-        	e.printStackTrace();
-        	return false;
-        }
-        
+	        return JCaptchaServiceSingleton.getInstance()
+	        		.validateResponseForID(
+	        				SecurityUtils.getSubject().getSession().getId().toString(), 
+	        				httpServletRequest.getParameter(jcaptchaParam)
+	        				);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
     }
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
