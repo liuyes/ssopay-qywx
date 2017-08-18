@@ -11,7 +11,8 @@
 		<result column="icon" property="icon" />
 		<result column="condition" property="condition" />
 		<result column="description" property="description" />
-		<result column="createDate" property="createDate" />
+		<result column="create_date" property="createDate" />
+		<result column="update_date" property="updateDate" />
 		<result column="disable" property="disable" />
 		<result column="creator_id" property="creatorId" />
 		<result column="parent_id" property="parentId" />
@@ -19,7 +20,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, rule, type, icon, condition, description, createDate AS createDate, disable, creator_id, parent_id
+        id, name, rule, type, icon, condition, description, create_date AS createDate, update_date AS updateDate, disable, creator_id, parent_id
     </sql>
     
     <!-- 查询用户所有的权限规则 -->

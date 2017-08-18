@@ -12,15 +12,15 @@
 		<result column="email" property="email" />
 		<result column="mobile" property="mobile" />
 		<result column="description" property="description" />
-		<result column="createDate" property="createDate" />
-		<result column="updateDate" property="updateDate" />
+		<result column="create_date" property="createDate" />
+		<result column="update_date" property="updateDate" />
 		<result column="disable" property="disable" />
 		<result column="creator_id" property="creatorId" />
 	</resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, username, password, salt, name, email, mobile, description, createDate AS createDate, updateDate AS updateDate, disable, creator_id
+        id, username, password, salt, name, email, mobile, description, create_date AS createDate, update_date AS updateDate, disable, creator_id
     </sql>
     
 </mapper>

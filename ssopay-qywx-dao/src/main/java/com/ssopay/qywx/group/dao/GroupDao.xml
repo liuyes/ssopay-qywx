@@ -7,14 +7,15 @@
 		<id column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="description" property="description" />
-		<result column="createDate" property="createDate" />
+		<result column="create_date" property="createDate" />
+		<result column="update_date" property="updateDate" />
 		<result column="disable" property="disable" />
 		<result column="creator_id" property="creatorId" />
 	</resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, description, createDate AS createDate, disable, creator_id
+        id, name, description, create_date AS createDate, update_date AS updateDate, disable, creator_id
     </sql>
 
 </mapper>
