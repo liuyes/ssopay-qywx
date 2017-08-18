@@ -37,17 +37,18 @@ Font-awesome | 字体图标  | [http://fontawesome.io/](http://fontawesome.io/)
 
 ## 界面演示
 ### 登录页
-![登录页](http://7xsmaf.com1.z0.glb.clouddn.com/login.png "登录页")
-![控制台](http://7xsmaf.com1.z0.glb.clouddn.com/1.png "控制台")
+![登录页](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/login.png "登录页")
+### 控制台
+![控制台](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/1.png "控制台")
 ### 用户管理
-![用户管理](http://7xsmaf.com1.z0.glb.clouddn.com/2.png "用户管理")
-![新增修改](http://7xsmaf.com1.z0.glb.clouddn.com/add.png "新增修改")
+![用户管理](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/2.png "用户管理")
+![新增修改](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/add.png "新增修改")
 ### 群组管理
-![群组管理](http://7xsmaf.com1.z0.glb.clouddn.com/3.png "群组管理")
-![新增修改](http://7xsmaf.com1.z0.glb.clouddn.com/add2.png "新增修改")
+![群组管理](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/3.png "群组管理")
+![新增修改](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/add2.png "新增修改")
 ### 规则管理
-![规则管理](http://7xsmaf.com1.z0.glb.clouddn.com/4.png "规则管理")
-![新增修改](http://7xsmaf.com1.z0.glb.clouddn.com/add3.png "新增修改")
+![规则管理](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/4.png "规则管理")
+![新增修改](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/add3.png "新增修改")
 
 ## 许可证
 
