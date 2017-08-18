@@ -14,10 +14,10 @@
 
     <!-- Realm实现 -->
     <bean id="shiroRealm" class="com.ssopay.qywx.shiro.service.impl.ShiroDbRealmImpl">
-        <property name="cachingEnabled" value="true"/>
-        <property name="authenticationCachingEnabled" value="true"/>
+        <property name="cachingEnabled" value="false"/>
+        <property name="authenticationCachingEnabled" value="false"/>
         <property name="authenticationCacheName" value="authenticationCache"/>
-        <property name="authorizationCachingEnabled" value="true"/>
+        <property name="authorizationCachingEnabled" value="false"/>
         <property name="authorizationCacheName" value="authorizationCache"/>
     </bean>
 
