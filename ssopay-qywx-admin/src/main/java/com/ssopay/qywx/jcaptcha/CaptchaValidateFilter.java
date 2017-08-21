@@ -4,7 +4,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
@@ -31,7 +30,7 @@ public class CaptchaValidateFilter extends AccessControlFilter {
         	// 此时是表单提交，验证验证码是否正确
 	        return JCaptchaServiceSingleton.getInstance()
 	        		.validateResponseForID(
-	        				SecurityUtils.getSubject().getSession().getId().toString(), 
+	        				httpServletRequest.getRequestedSessionId(), 
 	        				httpServletRequest.getParameter(jcaptchaParam)
 	        				);
 		} catch (Exception e) {

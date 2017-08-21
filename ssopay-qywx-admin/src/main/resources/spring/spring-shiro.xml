@@ -110,8 +110,8 @@
         <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
         <property name="filters">
             <util:map>
+            	<entry key="captchaValidate" value-ref="captchaValidateFilter"/>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
-                <entry key="captchaValidate" value-ref="captchaValidateFilter"/>
                 <entry key="ssl" value-ref="sslFilter"/>
             </util:map>
         </property>

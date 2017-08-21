@@ -15,7 +15,7 @@ public class JCaptchaServiceSingleton {
 	public synchronized static ImageCaptchaService getInstance() {
 		if (instance == null) {
 			instance = new DefaultManageableImageCaptchaService(
-					new FastHashMapCaptchaStore(), new JCaptchaEngine(), 180,
+					new FastHashMapCaptchaStore(), new GMailEngine(), 180,
 					100000, 75000);
 		}
 		return instance;

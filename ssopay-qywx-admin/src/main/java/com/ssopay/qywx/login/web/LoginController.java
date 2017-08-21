@@ -69,8 +69,8 @@ public class LoginController {
 		ServletOutputStream sos = null;
 		try {
 			sos = response.getOutputStream();
-			String sid = request.getSession().getId();
-			BufferedImage challenge = (BufferedImage) JCaptchaServiceSingleton.getInstance().getChallengeForID(sid);
+			String sid = request.getRequestedSessionId();
+			BufferedImage challenge = JCaptchaServiceSingleton.getInstance().getImageChallengeForID(sid);
 			ImageIO.write(challenge, "jpg", sos);
 			sos.flush();
 		} catch (Exception e) {
