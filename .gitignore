@@ -13,9 +13,8 @@ out
 
 target/
 work/
-*/lib/*
-*/classes/*
-
+lib/
+classes/
  
 bin/
 gen/
@@ -24,6 +23,7 @@ local.properties
 .DS_Store
 Thumbs.db
  
+*.class
 *.bak
 *.tem
 *.temp
