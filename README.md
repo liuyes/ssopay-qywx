@@ -14,6 +14,7 @@ ssopay-qywx
 ├── ssopay-qywx-dao -- MyBatis DAO
 ├── ssopay-qywx-admin -- 后台管理
 ├── ssopay-qywx-web -- 前台界面，暂未实现
+├── ssopay-qywx-doc -- 文档资料
 ```
 
 ### 技术选型
@@ -41,6 +42,7 @@ Font-awesome | 字体图标  | [http://fontawesome.io/](http://fontawesome.io/)
 2.修改ssopay-qywx-admin项目下的jdbc.properties数据库连接
 3.然后命令行进入项目根目录运行：mvn clean install
 4.将生成的ssopay-qywx-admin\target\ssopay-qywx-admin.war文件部署到tomcat下即可
+5.默认用户名：admin 密码：ssopay
 ```
 
 ## 界面演示
