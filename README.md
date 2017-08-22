@@ -61,3 +61,6 @@ Font-awesome | 字体图标  | [http://fontawesome.io/](http://fontawesome.io/)
 ## 许可证
 
 [Apache2](LICENSE "Apache2")
+```
+单独使用FastAdmin的模板需要取得相关授权，传送门：[@fastadmin-html](https://gitee.com/karson/fastadmin-html)
+```
