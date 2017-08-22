@@ -35,6 +35,14 @@ Bootstrap | 前端框架  | [http://getbootstrap.com/](http://getbootstrap.com/)
 Bootstrap-table | Bootstrap数据表格  | [http://bootstrap-table.wenzhixin.net.cn/](http://bootstrap-table.wenzhixin.net.cn/)
 Font-awesome | 字体图标  | [http://fontawesome.io/](http://fontawesome.io/)
 
+## 项目安装
+```
+1.导入ssopay-qywx-doc\sql下面的init.sql文件
+2.修改ssopay-qywx-admin项目下的jdbc.properties数据库连接
+3.然后命令行进入项目根目录运行：mvn clean install
+4.将生成的ssopay-qywx-admin\target\ssopay-qywx-admin.war文件部署到tomcat下即可
+```
+
 ## 界面演示
 ### 登录页
 ![登录页](https://raw.githubusercontent.com/liuyes/ssopay-qywx/master/snapshot/login.png "登录页")
